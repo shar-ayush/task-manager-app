@@ -1,0 +1,139 @@
+/* Custom styles for App component */
+.task-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+}
+
+.task-item.completed {
+  background: #f8f9fa;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-text {
+  flex: 1;
+  margin-left: 12px;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+.delete-button {
+  color: #dc3545;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  color: #c82333;
+  transform: scale(1.1);
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.filter-button:not(.active) {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.filter-button:not(.active):hover {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+}
+
+/* Animation for task addition */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Stats box styles */
+.stats-box {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.stats-box:hover {
+  transform: translateY(-2px);
+}
+
+/* Input focus styles */
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ced4da;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #007bff;
+}
